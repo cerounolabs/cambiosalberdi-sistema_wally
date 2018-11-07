@@ -24,7 +24,7 @@
                                 <span class="page-title-icon bg-gradient-primary text-white mr-2">
                                     <i class="mdi mdi-home"></i>                 
                                 </span>
-                                GEOLOCALIZACI&Oacute;N DE PERSONA X DOCUMENTO DIGITALIZADO
+                                GEOLOCALIZACI&Oacute;N DE PERSONA X FECHA DIGITALIZADO
                             </h1>
                         </div>
 
@@ -34,8 +34,8 @@
                                     <div class="card-body">
                                         <form class="forms-sample">
                                             <div class="form-group">
-                                                <label for="persona"> N&Uacute;MERO DOCUMENTO </label>
-                                                <input type="text" class="form-control" style="text-transform:uppercase;" id="persona" name="persona" placeholder="N&Uacute;MERO DOCUMENTO">
+                                                <label for="persona"> FECHA </label>
+                                                <input type="date" class="form-control" style="text-transform:uppercase;" id="persona" name="persona" placeholder="FECHA">
                                             </div>
 
                                             <a type="button" class="btn btn-gradient-primary btn-fw" style="float:right; margin-bottom: .75rem; background-color: rgba(172, 50, 228, 0.9); background-image: linear-gradient(to right, #da8cff, #9a55ff);" onclick="buscaPersona()"> Consultar </a>
@@ -89,7 +89,9 @@
                 while ($elemento = readdir($dir)) {
                     if ($elemento == '.' || $elemento == '..') {
                     } else {
-                        if (strpos($elemento, $arr_persona) !== false) {
+                        $fecCreacion = date("Y-m-d", filemtime($suc_ip.''.$elemento));
+                        
+                        if ($fecCreacion == $arr_persona) {
                             $item = $item + 1;
 ?>
                                                 <tr>
@@ -126,9 +128,9 @@
                 var urlGET  = "";
 
                 if (persona !== null && persona !== '') {
-                    urlGET = "http://10.168.196.152/sistema_wally/pages/persona_busca_dig.php?persona=" + persona;
+                    urlGET = "http://10.168.196.152/sistema_wally/pages/persona_busca_fec.php?persona=" + persona;
                 } else {
-                    urlGET = "http://10.168.196.152/sistema_wally/pages/persona_busca_dig.php";
+                    urlGET = "http://10.168.196.152/sistema_wally/pages/persona_busca_fec.php";
                 }
                 
                 window.location.href    = urlGET;

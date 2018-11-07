@@ -33,6 +33,7 @@
                     <div class="collapse show">
                         <ul class="nav flex-column sub-menu">
                             <li class="nav-item"> <a class="nav-link" href="../pages/persona_busca_dig.php">Busca x Digitalizado</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="../pages/persona_busca_fec.php">Busca x Fecha</a></li>
                             <li class="nav-item"> <a class="nav-link" href="../pages/persona_busca_doc.php">Busca x Documento</a></li>
                             <li class="nav-item"> <a class="nav-link" href="../pages/persona_busca_nom.php">Busca x Nombre</a></li>
                         </ul>
