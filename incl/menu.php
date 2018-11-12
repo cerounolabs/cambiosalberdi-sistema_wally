@@ -5,6 +5,9 @@
         </div>
 
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
+            <div class="search-field d-none d-md-block">
+                <p style="font-size:2.5rem !important; font-weight:bold; margin:0px; padding:5px;">SISTEMA WALLY <span style="font-size:1rem !important;">v1.1<span></p>
+            </div>
             <ul class="navbar-nav navbar-nav-right">
                 <li class="nav-item nav-profile dropdown">
                     <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
