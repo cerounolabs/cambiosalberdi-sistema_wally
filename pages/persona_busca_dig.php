@@ -12,10 +12,10 @@
     </head>
     <body>
         <div class="container-scroller">
-            <div class="container-fluid page-body-wrapper">
 <?php
-  include '../incl/menu.php';
+    include '../incl/menu.php';
 ?>
+            <div class="container-fluid page-body-wrapper">
                 <!-- partial -->
                 <div class="main-panel">
                     <div class="content-wrapper">
@@ -80,14 +80,14 @@
         );
 
         foreach($suc_array as $suc_key => $suc_ip) {
-            $fichero    = fopen($suc_ip, "r") or die('no se abrio');
+            $fichero    = fopen($suc_ip, "r") or die($suc_key.' => DISCO NO MONTADO'."\n");
         
             if (!$fichero) {
                 echo 'NO SE PUDO ABRIR EL DIRECTORIO DE LA SUCURSAL '.$suc_key;
             } else {
                 $dir = opendir($suc_ip);
                 while ($elemento = readdir($dir)) {
-                    if ($elemento == '.' || $elemento == '..') {
+                    if ($elemento == '.' || $elemento == '..' || $elemento == 'Thumbs.db') {
                     } else {
                         if (strpos($elemento, $arr_persona) !== false) {
                             $item = $item + 1;
