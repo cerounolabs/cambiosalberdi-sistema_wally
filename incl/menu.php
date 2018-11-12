@@ -1,50 +1,55 @@
-        <!-- partial:partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
-            <ul class="nav">
-                <li class="nav-item nav-profile">
-                    <a href="#" class="nav-link">
-                        <div class="nav-profile-image" style="width:100%; height:100%;">
-                            <img src="../images/logo/logo_menu.png" style="width:100%; height:100%; border-radius:0%;" alt="profile">
-                            <span class="login-status online"></span>             
+    <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo" href="#" style="width:100%; height:100%; border-radius:0%; padding:5px;" alt="profile"><img src="../images/logo/logo_menu.png" alt="logo" style="width:100%; height:100%; border-radius:0%;" alt="profile"/></a>
+            <a class="navbar-brand brand-logo-mini" href="#" style="width:100%; height:100%; border-radius:0%; padding:5px;" alt="profile"><img src="../images/logo/logo_menu.png" alt="logo" style="width:100%; height:100%; border-radius:0%;" alt="profile"/></a>
+        </div>
+
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+            <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item nav-profile dropdown">
+                    <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                        <div class="nav-profile-img">
+                            <img src="../images/favicon.png" alt="image">
+                            <span class="availability-status online"></span>             
+                        </div>
+                        <div class="nav-profile-text">
+                            <p class="mb-1 text-black"> MENU </p>
                         </div>
                     </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span class="menu-title">Dashboard</span>
-                        <i class="mdi mdi-home menu-icon"></i>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="../pages/persona_alta.php">
-                        <span class="menu-title">Nuevas</span>
-                        <i class="mdi mdi-account menu-icon"></i>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" aria-expanded="false" aria-controls="ui-basic">
-                        <span class="menu-title">Busqueda</span>
-                        <i class="menu-arrow"></i>
-                        <i class="mdi mdi-account menu-icon"></i>
-                    </a>
-                    <div class="collapse show">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="../pages/persona_busca_dig.php">Busca x Digitalizado</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="../pages/persona_busca_fec.php">Busca x Fecha</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="../pages/persona_busca_doc.php">Busca x Documento</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="../pages/persona_busca_nom.php">Busca x Nombre</a></li>
-                        </ul>
+                    <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" href="../pages/persona_alta.php">
+                            <i class="mdi mdi-chart-line mr-2 text-danger"></i>
+                            PERSONAS NUEVAS
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../pages/persona_busca_dig.php">
+                            <i class="mdi mdi-account-convert mr-2 text-info"></i>
+                            BUSCA X DOCUMENTO DIGITALIZADO
+                        </a>
+                        <a class="dropdown-item" href="../pages/persona_busca_fec.php">
+                            <i class="mdi mdi-account-convert mr-2 text-info"></i>
+                            BUSCA X FECHA DIGITALIZADO
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../pages/persona_busca_doc.php">
+                            <i class="mdi mdi-cached mr-2 text-success"></i>
+                            BUSCA X PERSONA DOCUMENTO
+                        </a>
+                        <a class="dropdown-item" href="../pages/persona_busca_nom.php">
+                            <i class="mdi mdi-cached mr-2 text-success"></i>
+                            BUSCA X PERSONA NOMBRE
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../class/logout.php">
+                            <i class="mdi mdi-power mr-2 text-danger"></i>
+                            CERRAR SESI&Oacute;N
+                        </a>
                     </div>
                 </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="../class/logout.php">
-                        <span class="menu-title">Cerrar Sesi&oacute;n</span>
-                        <i class="mdi mdi-power menu-icon"></i>
-                    </a>
-                </li>
             </ul>
-        </nav>
+
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                <span class="mdi mdi-menu"></span>
+            </button>
+        </div>
+    </nav>

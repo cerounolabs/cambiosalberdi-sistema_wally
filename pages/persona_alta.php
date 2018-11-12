@@ -12,10 +12,10 @@
     </head>
     <body>
         <div class="container-scroller">
-            <div class="container-fluid page-body-wrapper">
 <?php
-  include '../incl/menu.php';
+    include '../incl/menu.php';
 ?>
+            <div class="container-fluid page-body-wrapper">
                 <!-- partial -->
                 <div class="main-panel">
                     <div class="content-wrapper">
