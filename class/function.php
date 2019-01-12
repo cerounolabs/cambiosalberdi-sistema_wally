@@ -37,10 +37,11 @@
             $str_user       = 'sysdba';
             $str_pass       = 'dorotea';
             $str_conn       = ibase_connect($str_db, $str_user, $str_pass) OR DIE("NO SE CONECTO AL SERVIDOR: ".ibase_errmsg());
-            $wSQL00         = ibase_query("SELECT t1.FECHA, t1.ID_PERSONA, t1.CODIGO, t1.CODIGO_UNICO, t1.RUC, t1.PASAPORTE, t1.ID_NACIONALIDAD, t2.DESCRIPCION, t1.ID_PAIS, t3.DESCRIPCION, t1.RAZONSOCIAL, t1.INGRESADOPOR, t1.AUTORIZADOPOR
+            $wSQL00         = ibase_query("SELECT t1.FECHA, t1.ID_PERSONA, t1.CODIGO, t1.CODIGO_UNICO, t1.RUC, t1.PASAPORTE, t1.ID_NACIONALIDAD, t2.DESCRIPCION, t1.ID_PAIS, t3.DESCRIPCION, t1.RAZONSOCIAL, t1.INGRESADOPOR, t1.AUTORIZADOPOR, t1.ID_PAIS_DOCUMENTO, t4.DESCRIPCION
                                                 FROM PERSONAS t1
                                                 LEFT JOIN NACIONALIDADES t2 ON t2.ID_NACIONALIDAD = t1.ID_NACIONALIDAD
                                                 LEFT JOIN PAISES t3 ON t3.ID_PAIS = t1.ID_PAIS
+                                                LEFT JOIN PAIS_DOCUMENTO t4 ON t4.ID_PAIS_DOCUMENTO = t1.ID_PAIS_DOCUMENTO
                                                 WHERE t1.FECHA >= '$str_fecha'
                                                 ORDER BY t1.FECHA", $str_conn);
         
@@ -49,7 +50,7 @@
                 $horPersona     = substr($row00[0], 11, 8);
                 $dataPersona[]  = array("fecha" => $fecPersona, "hora" => $horPersona, "sucursal" => $suc_key, "id_persona" => $row00[1], "codigo_persona" => $row00[2], "codigo_unico" => $row00[3], 
                                     "ruc" => $row00[4], "pasaporte" => $row00[5], "codigo_nacionalidad" => $row00[6], "nombre_nacionalidad" => $row00[7], "codigo_pais" => $row00[8], "nombre_pais" => $row00[9],
-                                    "nombre_persona" => $row00[10], "usuario_ingresado" => $row00[11], "usuario_autorizado" => $row00[12]);
+                                    "nombre_persona" => $row00[10], "usuario_ingresado" => $row00[11], "usuario_autorizado" => $row00[12], "codigo_documento_pais" => $row00[13], "nombre_documento_pais" => $row00[14]);
             }
 
             ibase_free_result($wSQL00);
