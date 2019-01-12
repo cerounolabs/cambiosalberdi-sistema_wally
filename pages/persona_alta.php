@@ -66,7 +66,7 @@
                                                     <!--<td style="text-align:left;"> <?php //echo $dat_persona['id_persona']; ?> </td>-->
                                                     <td style="text-align:left;">   <?php echo $dat_persona['codigo_persona']; ?> </td>
                                                     <td style="text-align:left;">   <?php echo $dat_persona['codigo_unico']; ?> </td>
-                                                    <td style="text-align:left;">   <?php echo $dat_persona['codigo_documento_pais']; ?> </td>
+                                                    <td style="text-align:left;">   <?php echo $dat_persona['nombre_documento_pais']; ?> </td>
                                                     <td style="text-align:left;">   <?php echo $dat_persona['ruc']; ?> </td>
                                                     <!--<td style="text-align:left;"> <?php //echo $dat_persona['pasaporte']; ?> </td>-->
                                                     <td style="text-align:left;">   <?php echo $dat_persona['nombre_nacionalidad']; ?> </td>
