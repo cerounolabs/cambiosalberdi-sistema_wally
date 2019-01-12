@@ -41,6 +41,7 @@
                                                     <!--<th style="text-align:center;"> ID_PERSONA </th>-->
                                                     <th style="text-align:center;"> CODIGO </th>
                                                     <th style="text-align:center;"> CODIGO_UNICO </th>
+                                                    <th style="text-align:center;"> PAIS DOC. </th>
                                                     <th style="text-align:center;"> RUC </th>
                                                     <!--<th style="text-align:center;"> PASAPORTE </th>-->
                                                     <th style="text-align:center;"> NACIONALIDAD </th>
@@ -65,6 +66,7 @@
                                                     <!--<td style="text-align:left;"> <?php //echo $dat_persona['id_persona']; ?> </td>-->
                                                     <td style="text-align:left;">   <?php echo $dat_persona['codigo_persona']; ?> </td>
                                                     <td style="text-align:left;">   <?php echo $dat_persona['codigo_unico']; ?> </td>
+                                                    <td style="text-align:left;">   <?php echo $dat_persona['codigo_documento_pais']; ?> </td>
                                                     <td style="text-align:left;">   <?php echo $dat_persona['ruc']; ?> </td>
                                                     <!--<td style="text-align:left;"> <?php //echo $dat_persona['pasaporte']; ?> </td>-->
                                                     <td style="text-align:left;">   <?php echo $dat_persona['nombre_nacionalidad']; ?> </td>
